@@ -4,7 +4,8 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
  
- 
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (cons '("\\.text" . markdown-mode) auto-mode-alist)) 
  
 ;; ===== Automatically load abbreviations table =====
  
@@ -242,4 +243,3 @@
   (global-set-key (kbd "C-<f9>") 'sr-speedbar-toggle)
   (global-set-key (kbd "C-<f10>") 'sr-speedbar-select-window)) ; speedbar
 (global-set-key (kbd "C-c d") 'djcb-dup)
-
